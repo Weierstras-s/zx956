@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>CytusII</title>
+	<link href="../css/main.css" rel="stylesheet" type="text/css" />
+</head>
+<style>
+	.bg {
+		background: url("../image/cytus2/cytus2.jpg");
+		background-repeat: no-repeat;
+		background-position: 50% 100%;
+		background-size: cover;
+	}
+	.swf {
+		width: 100%;
+		height: calc( ( 100vw - 316px ) * 430 / 900 );
+	}
+</style>
+<body>
+	<div class="bg"></div>
+	<header>
+		<div class="title">
+			<img src="../image/cytus2/icon.jpg" alt="icon" align="left" height="150px" width="150px" />
+			<h1 align="center">Cytus II</h1>
+			<h3 align="center">Rayark</h3>
+		</div>
+	</header>
+	
+	<!--导航栏-->
+	<nav class="box">
+		<h1>Navigation</h1>
+		<p><a href="../index.html"><input type="button" name="home" value="Home" class="type1"></a></p>
+		<p><a href="deemo.html"><input type="button" name="home" value="Deemo" class="type1"></a></p>
+		<p><a href="arcaea.html"><input type="button" name="home" value="Arcaea" class="type1"></a></p>
+		<p><a href="#"><input type="button" name="home" value="CytusII" class="type1-chosen"></a></p>
+		<p><a href="lanota.html"><input type="button" name="home" value="Lanota" class="type1"></a></p>
+		<hr />
+		<h1>BGM</h1><h2>Used to be</h2>
+		<p><input type="button" id="playpause" name="playpause" value="Play" class="type1"></p>
+	</nav>
+	
+	<!--主体-->
+	<section>
+		<div class="main box">
+			<h1>简介</h1><hr />
+			<p>未来，人类重新定义了网路的发展和连线方式，能够轻易地在现实世界同步存取网路世界，改变了千年以来生活的样貌。</p>
+			<p>在巨型精神网路空间cyTus里，一位来历不明的传奇DJ Æsir，其音乐有着让人为之疯狂的魅力，每个音符和节拍都能够深深重击听者的灵魂深处。</p>
+			<p>某日，从未露面的Æsir突然宣布要举办第一场大型虚拟音乐祭——Æsir-FEST，邀请了当红偶像歌手以及人气DJ作为开场嘉宾。</p>
+			<p>宣传公开之际即造成前所未见的讨论热潮，所有人无不想一睹Æsir的真实面貌。</p>
+			<p>而在音乐祭入场的前一小时，数以千万计的连线浏览次数打破历史纪录，整个城市瞬间沸腾了起来，等待Æsir如同天神般的降临……</p>
+			
+		</div>
+		<div class="main box">
+			<h1>游戏系统</h1><hr />
+			
+			<h2>音符</h2>
+			<p>作为Cytus一代的续作，二代继承了一代的三种传统音符形式：</p>
+			<ul>
+				<li><strong>普通音符</strong>：在扫描线到其中心位置时被点击。注意此音符判定点击动作，即划过不会触发判定。<br><img src="../image/cytus2/demo/1.jpg" alt="demo"></li>
+				<li><strong>Drag</strong>：在扫描线到其中心时被划过或点击。<br><img src="../image/cytus2/demo/3.jpg" alt="demo"></li>
+				<li><strong>Hold</strong>：在扫描线到其气泡中心位置时按下，并在扫描线达到长条尾端后松开。<br><img src="../image/cytus2/demo/2.jpg" alt="demo"></li>
+			</ul>
+			<p>并加入了新的音符形式：</p>
+			<ul>
+				<li><strong>Flick</strong>（轻滑）：CHAOS, GLITCH难度限定（但并非所有CHAOS谱都有Flick，如Green Hope CHAOS难度）。左右滑动均可（但上下不行）。<br><img src="../image/cytus2/demo/4.jpg" alt="demo"></li>
+				<li><strong>跨屏Hold</strong>：和普通Hold处理方式一样，但会跨屏幕，这种Hold因此也不存在出现时机和时长上的限制。对于做谱人来说，跨屏Hold在一定程度上解决了传统Hold只能在一屏内出现，凑不满时值的问题。<br><img src="../image/cytus2/demo/5.jpg" alt="demo"></li>
+				<li><strong>特殊Drag</strong>（点锁）：2.0版本登场，和普通Drag不同的是，其颜色使用普通Click的颜色，而这类Drag的头部必须被点击才能判定。</li>
+				<li>二代的锁链可以真正的跨屏滑动，而不是像一代会在两屏分界处拆开。</li>
+			</ul>
+			
+			<h2>判定</h2>
+			判定有黄Perfect（Perfect/大P）、白Perfect（Great/小P）、Good、Bad、Miss五种。不同的音符对应的动画也不一样。
+			<p><table width="400" border="0"><tbody align="center">
+				<tr>
+					<th scope="col">判定等级</th>
+					<th scope="col">误差时间(ms)</th>
+					<th scope="col">分数</th>
+					<th scope="col">TP</th>
+					<th scope="col">连击</th>
+				</tr>
+				<tr>
+					<td><strong class="yellow">PERFECT</strong></td>
+					<td>0~70</td>
+					<td>100%</td>
+					<td>100%</td>
+					<td>√</td>
+				</tr>
+				<tr>
+					<td><strong>PERFECT</strong></td>
+					<td>71~175</td>
+					<td>100%</td>
+					<td>70%</td>
+					<td>√</td>
+				</tr>
+				<tr>
+					<td><strong class="blue">GOOD</strong></td>
+					<td>-</td>
+					<td>30%</td>
+					<td>30%</td>
+					<td>√</td>
+				</tr>
+				<tr>
+					<td><strong class="red">BAD</strong></td>
+					<td>-</td>
+					<td>30%</td>
+					<td>0%</td>
+					<td>×</td>
+				</tr>
+				<tr>
+					<td><strong class="red">MISS</strong></td>
+					<td>-</td>
+					<td>0%</td>
+					<td>0%</td>
+					<td>×</td>
+				</tr>
+			</tbody></table></p>
+			<ul>
+				<li>全Perfect时上方连击数为黄色；出现Good时，连击数变蓝；出现Bad和Miss时，下次形成连击时数字为白色。</li>
+				<li>在一代的基础上，锁链除不存在Bad与Good判定外，又增加了无小P的新判定机制，锁链无论如何处理都一定是大P（保大P特性仅限于紫色的普通锁链）。</li>
+				<li>Flick音符没有Good和Bad判定。</li>
+			</ul>
+			
+			<h2>结算系统</h2>
+			<p>和一代一样，每首歌曲结束后会在结算页面分别显示Perfect、Good、Bad、Miss判定的个数以及分数、TP与等级。</p>
+			<p>结算中的三大系统均是从一代沿袭而来的，但不同的有以下几点：</p>
+			<ul>
+				<li>二代的Good判定在分数上不是70%，而是30%，因此会出现Full Fail的情况（一代中All Good即全连最低分是63万+10万=73万，高于及格线）。</li>
+				<li>Full Combo在结算时会有提示（一代只有MM才会在结算中表示）。</li>
+				<li>TP用百分数表示，并保留两位小数，TP100在二代显示成TP100.00%（但很多玩家会继续沿用TP100的惯用说法）。</li>
+			</ul>
+			<p>目前Cytus II中所有谱面都已有人达成TP100。</p>
+		</div>
+		<div class="main box">
+			<h1>游戏截图</h1><hr />
+		  	<p><object classid="clsid27CDB6E-AE6D-11cf-96B8-444553540000"
+				codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" align="center">
+				<param name="quality" value="high">
+				<param name="wmode" value="transparent">
+				<embed src="../flash/cytus2.swf" class="swf" align="center" quality="high" type="application/x-shockwave-flash" wmode="transparent">
+			</object></p>
+		</div>
+	</section>
+	
+	<!--背景音乐-->
+	<audio src="../music/Used to be.mp3" id="aud" loop></audio>
+	<script type="text/javascript">
+		var aud = document.getElementById("aud");
+		var btn = document.getElementById("playpause");
+		btn.onclick = function() {
+			if (aud.paused) {
+				aud.play();
+			} else {
+				aud.pause();
+			}
+		}
+		aud.addEventListener("play", function (e) {
+			btn.value="Pause";
+		}, false);
+		aud.addEventListener("pause", function (e) {
+			btn.value="Play";
+		}, false);
+	</script>
+	
+	<footer>
+		<p>纯代码敲出来的 求给点同情分<img src="../image/emoji_kel.png" alt="emoji_kel"></p>
+	</footer>
+</body>
+</html>

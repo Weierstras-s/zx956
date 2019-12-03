@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Deemo</title>
+	<link href="../css/main.css" rel="stylesheet" type="text/css" />
+</head>
+<style>
+	.bg {
+		background: url(../image/deemo/deemo.jpg);
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		background-size: cover;
+	}
+	.swf {
+		width: 100%;
+		height: calc( ( 100vw - 316px ) * 430 / 820 );
+	}
+</style>
+<body>
+	<div class="bg"></div>
+	<header>
+		<div class="title">
+			<img src="../image/deemo/icon.jpg" alt="icon" align="left" height="150px" width="150px" />
+			<h1 align="center">Deemo</h1>
+			<h3 align="center">Rayark</h3>
+		</div>
+	</header>
+	
+	<!--导航栏-->
+	<nav class="box">
+		<h1>Navigation</h1>
+		<p><a href="../index.html"><input type="button" name="home" value="Home" class="type1"></a></p>
+		<p><a href="#"><input type="button" name="home" value="Deemo" class="type1-chosen"></a></p>
+		<p><a href="arcaea.html"><input type="button" name="home" value="Arcaea" class="type1"></a></p>
+		<p><a href="cytus2.html"><input type="button" name="home" value="CytusII" class="type1"></a></p>
+		<p><a href="lanota.html"><input type="button" name="home" value="Lanota" class="type1"></a></p>
+		<hr />
+		<h1>BGM</h1><h2>Evolution Era</h2>
+		<p><input type="button" id="playpause" name="playpause" value="Play" class="type1"></p>
+	</nav>
+	
+	<!--主体-->
+	<section>
+		<div class="main box">
+			<h1>简介</h1><hr />
+			<p>在钢琴大厅中，Deemo接住了一个从天而降的小女孩。虽然两人从未见过面，但是并不感到陌生。为了让小女孩解闷，Deemo开始弹起钢琴。在弹奏过程中Deemo和小女孩发现钢琴下树桩开始发芽，随著一首一首钢琴曲的奏起，树苗慢慢长高。为了使小女孩可以从房间的天窗离开，Deemo更加卖力地弹起了钢琴。</p>
+		</div>
+		<div class="main box">
+			<h1>游戏系统</h1><hr />
+			<p>相比雷亚游戏前一部音乐游戏Cytus，Deemo有更多的故事情节内容。</p>
+			<p>玩家可以和角色进行互动，在故事发展到一定程度后，会触发下一章节并有过场动画。可以在大厅左侧房间的左侧书架里回顾看过的过场动画。</p>
+			<h2>音符和判定</h2>
+			<p>与其他的下落式音乐游戏相同，游戏方式为点击从屏幕上方下落至判断线的音符。游戏中有两种音符：黑色的<strong>点击音符</strong>和金色的<strong class="yellow">滑动音符</strong>。</p>
+			<ul>
+				<li>
+					<strong>点击音符</strong>需要在音符落到判定线时依次点击。<br><img src="../image/deemo/demo/1.jpg" alt="demo">
+					<ul>
+						<li>黑色音符按照弹奏时的音色还有两种变体。纯黑色音符对应钢琴音，中间带白点的黑色音符对应非钢琴音（包括弦乐、鼓点和电子合成音）。纯黑色音符和金色音符存在Key音，弹奏时会产生对应的钢琴演奏效果。</li>
+					</ul>
+				</li>			
+				<li><strong class="yellow">滑动音符</strong>只需在音符快要落到判定线时划过（当然如果音符密度不大，节奏鲜明，也可以按照需要依次点击）。如果采取滑动的方式处理金色音符，需要注意：<strong>手指必须有滑动（哪怕是最轻微的移动），才可以被识别。<br><img src="../image/deemo/demo/2.jpg" alt="demo"></strong></li>
+			</ul>
+			<p>判定有Charming，Great，Bad和Miss四种。除了在Combo数下方显示Charming判定的有无之外，也可以通过判定线上的光效判断判定情况。</p>
+			<p><table width="500" border="0"><tbody align="center">
+				<tr>
+					<th scope="col">判定等级</th>
+					<th scope="col">误差时间(ms)</th>
+					<th scope="col">效果</th>
+					<th scope="col">连击</th>
+				</tr>
+				<tr>
+					<td><strong class="yellow">Charming</strong></td>
+					<td>0~50</td>
+					<td>金色</td>
+					<td>√</td>
+				</tr>
+				<tr>
+					<td><strong class="green">Great</strong></td>
+					<td>51~120</td>
+					<td>绿色</td>
+					<td>√</td>
+				</tr>
+				<tr>
+					<td><strong class="blue">Bad</strong></td>
+					<td>-</td>
+					<td>蓝色</td>
+					<td>×</td>
+				</tr>
+				<tr>
+					<td><strong>Miss</strong></td>
+					<td>漏键</td>
+					<td>无打击，音符减速下沉并消失</td>
+					<td>×</td>
+				</tr>
+			</tbody></table></p>
+			<p>无论是需要精确点击的黑色音符，还是需要滑动的金色音符，如果接音符的时机过早，很可能就会导致Bad，中断Combo。</p>
+			<p>一般不太熟练的玩家会认为金色音符只要不Bad或者是Miss就一定是Charming，然而实际上金色音符也很容易出现Great，但由于击打的瞬间，音符自身的金色光效容易遮盖住绿色的Great光效，再加上一般玩家的注意力都会集中在谱面上，分不出注意力去看有没有漏Charming，所以金色音符Great也是阻碍玩家冲击AC的隐形杀手。然而从3.1版本开始玩家就不用费劲猜自己有没有爆gr了，是否AC/FC的状况在游戏界面顶部一目了然</p>
+			<p>基于以上原理，对于绝大多数有金色音符的谱面来说，No Charming FC是可行的，只不过比AC需要更高的控制力和准度。</p>
+			<p>音符没有固定轨迹，在判断线上的任何地方都可能有音符落下。2.4版本起可以0.5为精度调节音符落下的速度。<span class="black">听说低速好看谱？</span></p>
+			<p>在实战操作中，很多玩家都会使用中低速（一般为2.5~4速）+上隐（用纸或者是特别开发的悬浮窗软件遮挡屏幕上方30%~45%的位置）的方式来使自己集中于判定线附近的音符，以提高注意力和准确度。此法适用于绝大多数下落式音游。</p>
+		</div>
+		<div class="main box">
+			<h1>登场角色<del>（剧透）</del></h1><hr />
+			<h2>Deemo</h2>
+			<p>主要角色。形象是一个黑色的人形，似乎穿著西服，不会说话。游戏中除了弹奏就是在看乐谱。2.0版本得知真正身份，是小女孩的哥哥，真名为汉斯（Hans）。在一次车祸中，为了救妹妹，奋身挡在她面前。在过世之前送了一只猫咪玩偶Mirai给妹妹。在世时曾获得钢琴比赛的金牌。</p>
+			<h2>小女孩</h2>
+			<p>从房间天窗掉下来的少女，被Deemo所救，对Deemo有著莫名的亲近，曾要求Deemo教她弹钢琴。记忆有点模糊，对于身处的房间十分好奇。2.0版本得知真正身份，名字是爱丽丝（Alice），是Deemo的妹妹。在车祸之后一直处于昏迷之中。</p>
+			<h2>面具小姐</h2>
+			<p>首次出现在钢琴大厅左侧图书馆的神秘人，名字是赛利亚（Celia）<span class="black">由小女孩的名字Alice乱序排成</span>。在故事最初在图书馆打瞌睡，醒来后不时抱怨Deemo弹奏的钢琴声，对于Deemo通过弹奏使树苗成长让小女孩离开的想法不屑一顾。</p>
+			<p>是故事中唯一一个会和小女孩进行对话的角色。小女孩认为面具小姐和Deemo是要好的朋友。</p>
+			<p>2.0版本得知真正身份，是小女孩的另一个自我，似乎知道一切，并不希望自己离开（醒来），曾想阻止小女孩的行动，不过被Deemo劝服。在小女孩离开时，脱下了面具。</p>
+		</div>
+		<div class="main box">
+			<h1>游戏截图</h1><hr />
+		  	<p><object classid="clsid27CDB6E-AE6D-11cf-96B8-444553540000"
+				codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" align="center">
+				<param name="quality" value="high">
+				<param name="wmode" value="transparent">
+				<embed src="../flash/deemo.swf" class="swf" align="center" quality="high" type="application/x-shockwave-flash" wmode="transparent">
+			</object></p>
+		</div>
+	</section>
+	
+	<!--背景音乐-->
+	<audio src="../music/Evolution Era.mp3" id="aud" loop></audio>
+	<script type="text/javascript">
+		var aud = document.getElementById("aud");
+		var btn = document.getElementById("playpause");
+		btn.onclick = function() {
+			if (aud.paused) {
+				aud.play();
+			} else {
+				aud.pause();
+			}
+		}
+		aud.addEventListener("play", function (e) {
+			btn.value="Pause";
+		}, false);
+		aud.addEventListener("pause", function (e) {
+			btn.value="Play";
+		}, false);
+	</script>
+	
+	<footer>
+		<p>纯代码敲出来的 求给点同情分<img src="../image/emoji_kel.png" alt="emoji_kel"></p>
+	</footer>
+</body>
+</html>

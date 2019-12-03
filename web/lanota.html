@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Lanota</title>
+	<link href="../css/main.css" rel="stylesheet" type="text/css" />
+</head>
+<style>
+	.bg {
+		background: url("../image/lanota/lanota.jpg");
+		background-repeat: no-repeat;
+		background-position: 50% 0%;
+		background-size: cover;
+	}
+	.swf {
+		width: 100%;
+		height: calc( ( 100vw - 316px ) * 430 / 900 );
+	}
+</style>
+<body>
+	<div class="bg"></div>
+	<header>
+		<div class="title">
+			<img src="../image/lanota/icon.jpg" alt="icon" align="left" height="150px" width="150px" />
+			<h1 align="center">Lanota</h1>
+			<h3 align="center">Noxy</h3>
+		</div>
+	</header>
+	
+	<!--导航栏-->
+	<nav class="box">
+		<h1>Navigation</h1>
+		<p><a href="../index.html"><input type="button" name="home" value="Home" class="type1"></a></p>
+		<p><a href="deemo.html"><input type="button" name="home" value="Deemo" class="type1"></a></p>
+		<p><a href="arcaea.html"><input type="button" name="home" value="Arcaea" class="type1"></a></p>
+		<p><a href="cytus2.html"><input type="button" name="home" value="CytusII" class="type1"></a></p>
+		<p><a href="#"><input type="button" name="home" value="Lanota" class="type1-chosen"></a></p>
+		<hr />
+		<h1>BGM</h1><h2>Dream Goes On</h2>
+		<p><input type="button" id="playpause" name="playpause" value="Play" class="type1"></p>
+	</nav>
+	
+	<!--主体-->
+	<section>
+		<div class="main box">
+			<h1>游戏系统</h1><hr />
+			<h2>铺面难度</h2>
+			<p>游戏中有<strong class="blue">Whisper</strong>、<strong class="green">Acoustic</strong>、<strong class="red">Ultra</strong>、<strong class="purple">Master</strong>四个难度可选，其中<span class="purple">Master</span>难度需要通关<span class="red">Ultra</span>难度并达成A或以上评价解锁。目前<span class="blue">Whisper</span>等级由1到6，<span class="green">Acoustic</span>等级由5到10，<span class="red">Ultra</span>等级由8到13，<span class="purple">Master</span>等级由10到15。<span class="black">MariannE：Ultra14；Stasis和SolarOrbit：Ultra15，Master16</span></p>
+
+			<h2>游戏操作</h2>
+			<ul>
+				<li><strong class="yellow">CLICK</strong>: 当note到达判定线时单击。<br><img src="../image/lanota/demo/1.jpg" alt="demo"></li>
+				<li><strong class="red">FLICK（向内）</strong>&<strong class="green">FLICK（向外）</strong>: 当note到达判定线时依照指示方向滑动。<br><img src="../image/lanota/demo/2.jpg" alt="demo"><br><img src="../image/lanota/demo/3.jpg" alt="demo"></li>
+				<li><strong class="blue">CATCH</strong>: 将手指置于note前直接接取。此种音符没有Tune判定。<br><img src="../image/lanota/demo/4.jpg" alt="demo"></li>
+				<li><strong class="blue">RAIL</strong>: 手指按住note并按形状滑动直至尾端。此种音符没有Tune判定。<br><strong>实际上该音符是由数个判定点组成的，只需在判定范围内进行单击或保持按住即可。</strong><br><img src="../image/lanota/demo/5.jpg" alt="demo"></li>
+			</ul>
+			<p>由于游戏在一个会移动、转圈<span class="black">、鬼畜</span>的盘子上进行（判定线就是盘子的外圈），下落方向也可能是360度中的任意方向，因此该游戏上手难度比其他固定轨道的下落式音游要高。</p>
+			<p>2019年4月1日，Lanota发布了新的打击音<span class="black">，打开后打击音效会非常鬼畜！</span></p>
+			<h2>游戏判定和结算</h2>
+			<p>游戏判定有三种：<strong class="yellow">Harmony</strong>、<strong class="blue">Tune</strong>、<strong class="red">Fail</strong>。结算界面有四种结果：<strong class="blue">Tuned</strong>、<strong class="red">Purefied</strong>、<strong class="blue-light">All Combo</strong>和<strong class="yellow">Perfect Purified</strong>，其中达成<strong class="yellow">Perfect Purified</strong>需要击中谱面所有Harmony判定（即100万分），即收歌。游玩一首曲目还有两种模式可选:<strong class="blue">Tune</strong>和<strong class="red">Purify</strong>（分别简称蓝盘子和红盘子），其中使用Purify模式游玩曲目时若获得连续15个Fail判定会直接结束游戏，游戏期间每11个combo可以回复1个Fail。不同得分会得到不同评级，其中98万分~100万分为L，95万分~98万分为S，90万分~95万分为A，70万分~90万分为B，60万分~70万分为C，60万分以下为D。</p>
+			<p><table width="250" border="0"><tbody align="center">
+				<tr>
+					<th scope="col">判定等级</th>
+					<th scope="col">误差时间(ms)</th>
+				</tr>
+				<tr>
+					<td><strong class="yellow">Harmony</strong></td>
+					<td>0~60</td>
+				</tr>
+				<tr>
+					<td><strong class="blue">Tune</strong></td>
+					<td>61~120</td>
+				</tr>
+				<tr>
+					<td><strong class="red">Fail</strong></td>
+					<td>漏键</td>
+				</tr>
+			</tbody></table></p>
+		</div>
+		<div class="main box">
+			<h1>游戏截图</h1><hr />
+		  	<p><object classid="clsid27CDB6E-AE6D-11cf-96B8-444553540000"
+				codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" align="center">
+				<param name="quality" value="high">
+				<param name="wmode" value="transparent">
+				<embed src="../flash/lanota.swf" class="swf" align="center" quality="high" type="application/x-shockwave-flash" wmode="transparent">
+			</object></p>
+		</div>
+	</section>
+	
+	<!--背景音乐-->
+	<audio src="../music/Dream goes on.mp3" id="aud" loop></audio>
+	<script type="text/javascript">
+		var aud = document.getElementById("aud");
+		var btn = document.getElementById("playpause");
+		btn.onclick = function() {
+			if (aud.paused) {
+				aud.play();
+			} else {
+				aud.pause();
+			}
+		}
+		aud.addEventListener("play", function (e) {
+			btn.value="Pause";
+		}, false);
+		aud.addEventListener("pause", function (e) {
+			btn.value="Play";
+		}, false);
+	</script>
+	
+	<footer>
+		<p>纯代码敲出来的 求给点同情分<img src="../image/emoji_kel.png" alt="emoji_kel"></p>
+	</footer>
+</body>
+</html>
